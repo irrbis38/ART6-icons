@@ -1,4 +1,20 @@
 extends base/_layout
 block head
-    title Main
+    title ART6 - icons
 block page
+
+    ul.icons
+
+        -
+            const items = [
+                {title: 'СберЛогистика', imgNumber: 1},
+                {title: 'boxberry', imgNumber: 2},
+                {title: 'СДЭК', imgNumber: 3},
+                {title: 'ПЭК', imgNumber: 4},
+                {title: 'Почта России', imgNumber: 5},
+                {title: 'Деловые Линии', imgNumber: 6},
+                {title: 'dpd', imgNumber: 7}
+            ]
+
+        each item in items 
+            +icons_item(item.title, item.imgNumber)

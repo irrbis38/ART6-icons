@@ -38,19 +38,30 @@ mixin pagination(amount, current, ellipsis, last, arrows)
 
         ul.pagination__list
             - for (var index = 1; index <= amount; index++)
-                    if (index === current)
-                        li.pagination__item.current
-                            span= index
-                    else if (index === ellipsis)
-                        li.pagination__item
-                            a(href="#").is-collapsed ...
-                    else
-                        li.pagination__item
-                            a(href="#")= index
-
-            - for (var index = last; index <= last; index++)
+                if (index === current)
+                    li.pagination__item.current
+                        span= index
+                else if (index === ellipsis)
+                    li.pagination__item
+                        a(href="#").is-collapsed ...
+                else
                     li.pagination__item
                         a(href="#")= index
 
+            - for (var index = last; index <= last; index++)
+                li.pagination__item
+                    a(href="#")= index
+
         if (arrows === true)
             a(href="#").pagination__next: span
+
+
+mixin icons_item(title, number)
+
+    li.icons__item 
+
+        .icons__logo
+            img(src="./images/icons/icon" + number + ".svg" alt= title)
+            img(src="./images/icons/icon" + number + "-small.svg" alt= title)
+
+        h3.icons__name title
