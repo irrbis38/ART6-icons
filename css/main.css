@@ -19,7 +19,6 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 35px 50px;
-  list-style-type: none;
 }
 @media only screen and (max-width: 1099px) {
   .icons {
