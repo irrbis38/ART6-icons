@@ -14,46 +14,50 @@ body {
   margin: 0 auto;
   padding: 12px 13px;
   display: grid;
-  grid-template-columns: repeat(4, 230px);
+  grid-template-columns: repeat(auto-fill, minmax(158px, 230px));
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 35px 50px;
 }
-@media only screen and (max-width: 1099px) {
+@media (max-width: 1099px) {
   .icons {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (max-width: 1023px) {
-  .icons {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px 90px;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 @media (max-width: 767px) {
   .icons {
+    grid-template-columns: repeat(auto-fill, 170px);
     gap: 35px 40px;
-  }
-}
-@media only screen and (max-width: 699px) {
-  .icons {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px 90px;
   }
 }
 @media (max-width: 575px) {
   .icons {
-    gap: 20px 70px;
+    grid-template-columns: repeat(auto-fill, 158px);
   }
 }
 @media (max-width: 479px) {
   .icons {
-    gap: 14px 44px;
+    gap: 13px 44px;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 389px) {
+  .icons {
+    grid-template-columns: repeat(auto-fill, 140px);
+
+    gap: 14px 20px;
+
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 .icons__item {
-  max-width: 230px;
   box-sizing: border-box;
 }
 .icons__logo {
@@ -77,6 +81,7 @@ body {
 @media (max-width: 575px) {
   .icons__logo {
     margin-bottom: 6px;
+    padding-top: 56.8%;
   }
 }
 .icons__name {
