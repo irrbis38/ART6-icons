@@ -12,7 +12,7 @@ body {
   box-sizing: border-box;
   max-width: 1208px;
   margin: 0 auto;
-  padding: 12px 13px;
+  padding: 15px 15px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(158px, 230px));
   -webkit-justify-content: space-between;
@@ -20,43 +20,25 @@ body {
   justify-content: space-between;
   gap: 35px 50px;
 }
-@media (max-width: 1099px) {
-  .icons {
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-}
 @media (max-width: 991px) {
   .icons {
-    /* grid-template-columns: repeat(auto-fill, 170px); */
     grid-template-columns: repeat(3, 1fr);
     gap: 35px 40px;
   }
 }
 @media (max-width: 575px) {
   .icons {
-    /* grid-template-columns: repeat(auto-fill, 158px); */
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 479px) {
   .icons {
     gap: 13px 44px;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
   }
 }
 @media (max-width: 380px) {
   .icons {
-    /* grid-template-columns: repeat(2, 1fr); */
-
     gap: 14px 20px;
-
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
   }
 }
 .icons__item {
