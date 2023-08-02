@@ -27,15 +27,17 @@ body {
     justify-content: center;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .icons {
-    grid-template-columns: repeat(auto-fill, 170px);
+    /* grid-template-columns: repeat(auto-fill, 170px); */
+    grid-template-columns: repeat(3, 1fr);
     gap: 35px 40px;
   }
 }
 @media (max-width: 575px) {
   .icons {
-    grid-template-columns: repeat(auto-fill, 158px);
+    /* grid-template-columns: repeat(auto-fill, 158px); */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 479px) {
@@ -46,9 +48,9 @@ body {
     justify-content: space-between;
   }
 }
-@media (max-width: 389px) {
+@media (max-width: 380px) {
   .icons {
-    grid-template-columns: repeat(auto-fill, 140px);
+    /* grid-template-columns: repeat(2, 1fr); */
 
     gap: 14px 20px;
 
